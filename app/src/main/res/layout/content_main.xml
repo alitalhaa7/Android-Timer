@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="talha.timer.talha.mytimerapp.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/start_button"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/relativeLayout2">
+
+    <talha.timer.talha.mytimerapp.TimerDraw
+            android:layout_width="298dp"
+            android:layout_height="400dp"
+            custom:circleColor="#ff0099"
+            custom:circleLabel="Hello"
+            custom:labelColor="#ffff66"
+            android:onClick="startTimerActivity"
+
+
+            android:id="@+id/view"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="@string/timer_initial"
+        android:id="@+id/timerVal"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/view"
+        android:layout_alignEnd="@+id/view" />
+
+    </RelativeLayout>
+
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minPicker"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/relativeLayout2"
+        android:layout_alignStart="@+id/relativeLayout2"
+        android:layout_below="@+id/textView4" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secPicker"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/minPicker" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/milliPicker"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/secPicker"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:layout_alignEnd="@+id/relativeLayout2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Minutes"
+        android:id="@+id/textView2"
+        android:layout_alignRight="@+id/secPicker"
+        android:layout_alignEnd="@+id/secPicker"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/secPicker"
+        android:layout_alignStart="@+id/secPicker"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Seconds"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/milliPicker"
+        android:layout_alignStart="@+id/milliPicker"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Hours"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignLeft="@+id/minPicker"
+        android:layout_alignStart="@+id/minPicker"
+        android:layout_alignRight="@+id/minPicker"
+        android:layout_alignEnd="@+id/minPicker"
+        android:gravity="center"
+
+        />
+
+</RelativeLayout>
